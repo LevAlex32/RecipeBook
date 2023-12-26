@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Съедобное vs Несъедобное</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #gameContainer {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 20px auto;
+            position: relative;
+        }
+        #player {
+            width: 50px;
+            height: 50px;
+            background-image: url('./img/player.png'); /* Замените путь на свой путь к изображению игрока */
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            left: 50%; /* Установите позицию игрока по горизонтали */
+            transform: translateX(-50%);
+        }
+        .edible {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-image: url('./img/edible1.png');
+        }
+        .inedible {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-image: url('./img/inedible1.png');
+        }
+        #score {
+            margin-top: 20px;
+        }
+        #lives {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Съедобное vs Несъедобное</h1>
+    <div id="gameContainer">
+        <div id="player"></div>
+    </div>
+    <div id="score">Очки: 0</div>
+    <div id="lives">Жизни: 3</div>
+
+    <script src="./js/game.js"></script>
+</body>
+</html>
